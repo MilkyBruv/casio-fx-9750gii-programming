@@ -5,9 +5,7 @@ Docs on how to program the Casio fx-9750GII Calculator.
 
 The Casio Casio fx-9750GII uses a form of BASIC to create simple programs.
 
-It does NOT have the ability to draw select pixels, it can only display text.
-
-It uses a 27x7 unit display (1 unit is 1 character).
+It uses a 27x7 unit display (1 unit is 1 character), or a 63x127 pixel display when using the graphing mode.
 
 
 
@@ -37,14 +35,16 @@ Press `EXIT` to backtrack through the menus.
 
 Press `SHIFT` + `4 (^CATALOG)` to access the catalogue of all commands, then press `F6 (CTGY)` + `5` to get the whole list of programming commands.
 
-The programming options are as follows.
+Press `F6 [CHAR]` to access the character menu.
+
+The basic programming options are as follows.
 
 **COM**
 - `If`
 - `Then`
 - `Else`
 - `I•End` (IfEnd)
-- `[>]`
+- `[►]`
 - `For`
 - `To`
 - `Step`
@@ -122,6 +122,61 @@ The programming options are as follows.
 - `Rot` (StrRotate)
 - `[►]`
 
+
+
+## Examples and Documentation
+
+### Variables
+
+Can only use `A` to `Z` to hold variables.
+
+Sets the value of `A` to `1`
+```c
+1→A
+```
+
+Sets the value of `A` to `D` (`A`, `B`, `C`, `D`) to `1`
+```c
+1→A~D
+```
+
+
+
+### Loops and Conditionals
+
+Using `If` and `Else`.
+```c
+3→A
+If A=1
+Then ...
+...
+Else
+...
+IfEnd
+```
+
+Using `While` and `WhileEnd`
+```c
+0→A
+While A<5
+A+1→A
+EndWhile
+```
+
+Using `Do` and `LpWhile`
+```c
+Do
+...
+LpWhile
+```
+
+### Labels
+
+Can use numbers to label and jump to certain sections of a program.
+
+```c
+3→A
+Lbl 1
 
 
 ## Useful Links
