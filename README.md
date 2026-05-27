@@ -146,18 +146,20 @@ Sets the value of `A` to `D` (`A`, `B`, `C`, `D`) to `1`
 
 Using `If` and `Else`.
 ```c
-3→A
-If A=1
-Then ...
-...
-Else
-...
+12→A
+
+If A≥18
+Then "YOU ARE OVER 18"
+"YOU AN ADULT"
+Else "YOU ARE UNDER 18"
+"YOU ARE A CHILD"
 IfEnd
 ```
 
 Using `While` and `WhileEnd`
 ```c
 0→A
+
 While A<5
 A+1→A
 EndWhile
@@ -165,9 +167,10 @@ EndWhile
 
 Using `Do` and `LpWhile`
 ```c
+5→A
 Do
-...
-LpWhile
+A-1→A
+LpWhile A>0
 ```
 
 ### Labels
@@ -175,9 +178,17 @@ LpWhile
 Can use numbers to label and jump to certain sections of a program.
 
 ```c
-3→A
+0→A
 Lbl 1
+A+1→A
+Goto 2
 
+100→A // This is skipped
+
+Lbl 2
+A-2→A
+Goto 1
+```
 
 ## Useful Links
 
